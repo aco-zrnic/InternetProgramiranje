@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Aleksandar Zrnic">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+        <link rel="stylesheet" href="stylematerijalPredmeta.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="javascriptMaterijal.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" > <!--Dodati da se vrati na pocetnu stranu-->
+                    <p>
+                        <span class="logo-font-one">OrgEDGE</span><br>
+                        <span class="logo-font-two">Organization & Knowledge</span>
+                    </p>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                                <li class="nav-item active">
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item align-items-center dropleft show">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="far fa-user" aria-hidden="true"></i> Profile
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-user-cog" aria-hidden="true"></i> Profil</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Sing out</a>   
+                                </div>
+                            </li>                  
+                        </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Posalji materijal-->
+        <div class="container-fluid" style="background-color:#04001D; color: white;">
+            <div class="row padding">
+                <div class="col-xs-12 col-sm-12 col-md-8">
+                    <p style="text-align: center; padding-top:100px;">Kolegijalnost je nešto što karakteriše ovaj dio rada studentske organizacije OrhEDGE. 
+                        Ako imate digitalni materijal, pošaljite nam kako bi svi bili na jednom mjestu. A ostale kolege ce imati priliku 
+                    da ocijene vas materijal. </p>
+                    <p style="text-align: right; margin-right: 15px; font-weight: bold;">Pažljivo popunite formu!</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4" style="padding-top: 40px; padding-bottom: 20px;">
+                    <form> <!--Dodati potrebnu akciju-->
+                        <input type = "file" name = "fileupload-materijal" accept = ".pdf,.doc"/ required style="margin-bottom: 20px;"> <!--Koji fajlovi se mogu da se salju-->
+                        <br>
+                        <select class="form-control form-control-lg" name="category" id="validationCustom03" onchange="ChangecatList()" required">
+                                <option value="">Izaberite... </option>
+                                <option value="1">Prva godina</option>
+                                <option value="2">Druga godina</option>
+                                <option value="3">Treća godina</option>
+                                <option value="4">Četvrta godina</option>
+                         </select>       
+                         <br> 
+                        <select class="form-control form-control-lg" id="validationCustom04" name="activity" required></select>
+                        <br>
+                        <select class="form-control form-control-lg" name="category" id="validationCustom03" onchange="ChangecatList()" required">
+                          <option value="">Izaberite... </option>
+                          <option value="1">Sveska</option>
+                          <option value="2">Ispitni rokovi</option>
+                          <option value="3">Knjiga</option>
+                          <option value="4">Prezentacije</option>
+                          <option value="5">Linkovi</option>
+                        </select>
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-outline-light"> Pošalji nam materijal</button>
+                    </form>               
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid padding"> <!--Naslov "Materijali"-->
+            <div class="row text-center ">
+                <div class="col-xl-12">
+                    <h1 class="display-2" style="color: whitesmoke;">Materijali</h1>
+                </div>
+               
+            </div>
+        </div>
+        <div class="container-fluid"> <!--Prikaz svih materijala,prva kolona treba da bude zaobljena prvi vrhu a tako isto i zadnja,ostale NE!...ja sam vec to odradio,vi samo to obezbjedite-->
+            <div class="row text-center ">
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>
+                <div class=" d-flex flex-row justify-content-between col-xs-12 col-sm-10 col-md-8 border rounded-top" style="background-color: whitesmoke; padding-top: 10px;">
+                    <a href="#" style=" padding-top: 10px; padding-bottom: 10px;">2018-Predavanja 2018/19.pdf</a>
+                    <p style="padding-top: 10px;">Tip: Prezentacija </p>
+                    <p style="padding-top: 10px;">Ocjena: 9.7</p>
+                </div>
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>  
+            </div>            
+            <div class="row text-center ">
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>
+                <div class=" d-flex flex-row justify-content-between col-xs-12 col-sm-10 col-md-8 border" style="background-color: whitesmoke; padding-top: 10px;">
+                    <a href="#" style=" padding-top: 10px; padding-bottom: 10px;">Kako instalirati VS Code</a>
+                    <p style="padding-top: 10px;">Tip: Link </p>
+                    <p style="padding-top: 10px;">Ocjena: 9</p>
+                </div>
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>  
+            </div>
+            <div class="row text-center ">
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>
+                <div class=" d-flex flex-row justify-content-between col-xs-12 col-sm-10 col-md-8 border" style="background-color: whitesmoke; padding-top: 10px;">
+                    <a href="#" style=" padding-top: 10px; padding-bottom: 10px;">2018-Predavanja 2018/19.pdf</a>
+                    <p style="padding-top: 10px;">Tip: Prezentacija </p>
+                    <p style="padding-top: 10px;">Ocjena: 9.7</p>
+                </div>
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>  
+            </div>
+            <div class="row text-center ">
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>
+                <div class=" d-flex flex-row justify-content-between col-xs-12 col-sm-10 col-md-8 border" style="background-color: whitesmoke; padding-top: 10px;">
+                    <a href="#" style=" padding-top: 10px; padding-bottom: 10px;">2018-Predavanja 2018/19.pdf</a>
+                    <p style="padding-top: 10px;">Tip: Prezentacija </p>
+                    <p style="padding-top: 10px;">Ocjena: 9.7</p>
+                </div>
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>  
+            </div>
+            <div class="row text-center ">
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>
+                <div class=" d-flex flex-row justify-content-between col-xs-12 col-sm-10 col-md-8 border" style="background-color: whitesmoke; padding-top: 10px;">
+                    <a href="#" style=" padding-top: 10px; padding-bottom: 10px;">2018-Predavanja 2018/19.pdf</a>
+                    <p style="padding-top: 10px;">Tip: Prezentacija </p>
+                    <p style="padding-top: 10px;">Ocjena: 9.7</p>
+                </div>
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>  
+            </div>
+            <div class="row text-center ">
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>
+                <div class=" d-flex flex-row justify-content-between col-xs-12 col-sm-10 col-md-8 border" style="background-color: whitesmoke; padding-top: 10px;">
+                    <a href="#" style=" padding-top: 10px; padding-bottom: 10px;">2018-Predavanja 2018/19.pdf</a>
+                    <p style="padding-top: 10px;">Tip: Prezentacija </p>
+                    <p style="padding-top: 10px;">Ocjena: 9.7</p>
+                </div>
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>  
+            </div>
+            <div class="row text-center ">
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>
+                <div class=" d-flex flex-row justify-content-between col-xs-12 col-sm-10 col-md-8 border" style="background-color: whitesmoke; padding-top: 10px;">
+                    <a href="#" style=" padding-top: 10px; padding-bottom: 10px;">2018-Predavanja 2018/19.pdf</a>
+                    <p style="padding-top: 10px;">Tip: Prezentacija </p>
+                    <p style="padding-top: 10px;">Ocjena: 9.7</p>
+                </div>
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>  
+            </div>
+            <div class="row text-center ">
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>
+                <div class=" d-flex flex-row justify-content-between col-xs-12 col-sm-10 col-md-8 border" style="background-color: whitesmoke; padding-top: 10px;">
+                    <a href="#" style=" padding-top: 10px; padding-bottom: 10px;">2018-Predavanja 2018/19.pdf</a>
+                    <p style="padding-top: 10px;">Tip: Prezentacija </p>
+                    <p style="padding-top: 10px;">Ocjena: 9.7</p>
+                </div>
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>  
+            </div>
+            <div class="row text-center ">
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>
+                <div class=" d-flex flex-row justify-content-between col-xs-12 col-sm-10 col-md-8 border" style="background-color: whitesmoke; padding-top: 10px;">
+                    <a href="#" style=" padding-top: 10px; padding-bottom: 10px;">2018-Predavanja 2018/19.pdf</a>
+                    <p style="padding-top: 10px;">Tip: Prezentacija </p>
+                    <p style="padding-top: 10px;">Ocjena: 9.7</p>
+                </div>
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>  
+            </div>
+            <div class="row text-center ">
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>
+                <div class=" d-flex flex-row justify-content-between col-xs-12 col-sm-10 col-md-8 border rounded-bottom" style="background-color: whitesmoke; padding-top: 10px;">
+                    <a href="#" style=" padding-top: 10px; padding-bottom: 10px;">2018-Predavanja 2018/19.pdf</a>
+                    <p style="padding-top: 10px;">Tip: Prezentacija </p>
+                    <p style="padding-top: 10px;">Ocjena: 9.7</p>
+                </div>
+                <div class=" col-xs-12 col-sm-1 col-md-2">       
+                </div>  
+            </div>
+        </div> <!--Listanje strana materijala-->
+        <nav aria-label="Page navigation example"> <!--Broj stranice-->
+            <div class="container-fluid padding">
+                <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" tabindex="-1">Prethodna</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Iduca</a>
+                </li>
+                </ul>           
+            </div>
+        </nav>
+
+        <footer>
+            <div class="container-fluid padding">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h5>Copyright © 2019 ~ Studenstka organizacija OrhEDGE ~ Izrada: Aleksandar Zrnić </h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

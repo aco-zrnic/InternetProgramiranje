@@ -1,0 +1,27 @@
+
+.navbar {
+    padding: 10px;
+}
+.navbar-nav li {
+    padding-left: 20px;
+}
+.nav-link {
+    font-size: 20px;
+}
+.logo-font-one {
+    font-size: 30px;
+    
+} 
+.logo-font-two {
+    font-size: 14px;
+    text-decoration: underline;
+}
+footer {
+    background-color: #3f3f3f;
+    color: white;
+    padding-top: 2rem;
+}
+.padding {
+    padding-bottom: 1rem;
+    padding-top:1rem;
+}

@@ -1,0 +1,5 @@
+<!doctype html>
+<select id="second-choice">
+<option>Coffee</option>
+<option>Coke</option>
+</select>
